@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	//|---------|-----------|---------|---------|---------|---------|---------------|	|---------------|---------|---------|---------|---------|---------|---------|
 			KC_TRNS	,	KC_TRNS		,	KC_TRNS	,	KC_TRNS	,	KC_TRNS	,	KC_TRNS	,	KC_TRNS				,		BL_INC				,	BL_DEC	,	KC_P0		,	KC_P1		,	KC_P2		,	KC_P3		,	KC_TRNS	,
 	//|---------|-----------|---------|---------|---------|---------|---------------|	|---------------|---------|---------|---------|---------|---------|---------|
-			KC_TRNS	,	KC_TRNS		,	KC_TRNS	,	KC_TRNS	,	KC_TRNS	,	KC_TRNS	,	KC_TRNS				,		BL_BRTG				,	BL_TOGG	,	KC_TRNS	,	KC_P0		,	KC_P0		,	KC_PDOT	,	KC_TRNS
+			KC_TRNS	,	KC_TRNS		,	KC_TRNS	,	KC_TRNS	,	KC_TRNS	,	KC_TRNS	,	KC_TRNS				,		BL_TOGG				,	BL_BRTG	,	KC_TRNS	,	KC_P0		,	KC_P0		,	KC_PDOT	,	KC_TRNS
 	//|---------|-----------|---------|---------|---------|---------|---------------|	|---------------|---------|---------|---------|---------|---------|---------|
 	),
 	[_SWAP] = LAYOUT_ortho_5x14( // This is used b/c my pc's sometimes swap GUI and ALT, this toggles them
