@@ -29,3 +29,5 @@
   // Custom colors
   #define CAP_PURPLE  250, 25, 68
 #endif
+//Define a preview timeout for RGB reviews
+#define PREVIEW_TIMEOUT 5000

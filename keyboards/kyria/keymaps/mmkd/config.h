@@ -16,17 +16,24 @@
 
 #pragma once
 
-#ifdef OLED_DRIVER_ENABLE
-  #define OLED_DISPLAY_128X64
-#endif
+// #ifndef CONFIG_USER_H
+// #define CONFIG_USER_H
+// #endif
 
-#ifdef RGBLIGHT_ENABLE
-  #define RGBLIGHT_ANIMATIONS
-  #define RGBLIGHT_HUE_STEP 8
-  #define RGBLIGHT_SAT_STEP 8
-  #define RGBLIGHT_VAL_STEP 8
-#endif
+#define PREVIEW_TIMEOUT 5000
+// Enable Light Layers implementation
+#define RGBLIGHT_LAYERS
+// Allow Light Layers to override RGB off configuration
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT
 // #define NO_USB_STARTUP_CHECK
+#ifndef NO_DEBUG
+#define NO_DEBUG
+#endif // !NO_DEBUG
+// #if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
+// #define NO_PRINT
+// #endif // !NO_PRINT

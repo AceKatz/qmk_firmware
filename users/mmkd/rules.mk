@@ -25,7 +25,7 @@ UCIS_ENABLE = no
 SRC += mmkd.c
 
 ifeq ($(strip $(OLED_DRIVER_ENABLE)), yes)
-    SRC += animations.c\
+    SRC += "$(USER_PATH)/animations.c"
      			 oled_stuff.c
 endif
 

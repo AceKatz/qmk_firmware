@@ -1,8 +1,8 @@
 #pragma once
 #include QMK_KEYBOARD_H
+#include "quantum.h"
 
-// #include "quantum.h"
-#include "version.h"
+// #include "version.h"
 
 
 #ifdef RGBLIGHT_ENABLE
@@ -15,12 +15,27 @@
     #include "animations.h"
 #endif
 
-enum tap_dance{
+enum tap_dance {
 	TD_BRAK = 0,
 	TD_G_E,
 	TD_BSLSH,
 	TD_SWAP_HANDS,
 	TD_LINE
+};
+
+enum layer_names {
+  _QWERTY = 0,  //Qwerty with custom shortcuts and functions
+  _NUM,  //numpad or numbers
+  _FN,
+  _SWAP, // This is used b/c my pc's sometimes swap GUI and ALT, this toggles them
+  _MOVE  // Swap left and right hands
+  // _DEFAULT     //Default ANSI for gaming, enable with FN2+RCtl
+  // _NAVKEY,      //Macropad nav keys
+  // _MEDIA,       //Macropad media controls
+  // _RGB,         //Macropad RGB controls
+  // _FN1PAD,      //Macropad reset and make commands
+  // _FN1_60,      //Function keys, arrows, custom shortcuts, volume control
+  // _FN2_60       //RGB Underglow controls and RESET
 };
 
 #define TD_BRK TD(TD_BRAK)
@@ -47,19 +62,9 @@ enum tap_dance{
 #define SPC KC_SPACE
 #define BSC KC_BSPACE
 #define TAB KC_TAB
+#define CAP_PURPLE  250, 25, 68
+// static uint32_t rgb_preview_timer = 0;
 
-
-enum layer_names {
-  _QWERTY = 0,  //Qwerty with custom shortcuts and functions
-  _NUM,  //numpad or numbers
-  _FN,
-  _SWAP, // This is used b/c my pc's sometimes swap GUI and ALT, this toggles them
-  _MOVE,  // Swap left and right hands
-  _DEFAULT,     //Default ANSI for gaming, enable with FN2+RCtl
-  // _NAVKEY,      //Macropad nav keys
-  // _MEDIA,       //Macropad media controls
-  // _RGB,         //Macropad RGB controls
-  // _FN1PAD,      //Macropad reset and make commands
-  _FN1_60,      //Function keys, arrows, custom shortcuts, volume control
-  _FN2_60       //RGB Underglow controls and RESET
-};
+bool process_record_user(uint16_t keycode, keyrecord_t *record);
+// void post_process_record_user(uint16_t keycode, keyrecord_t *record);
+// void keyboard_post_init_keymap(void);
